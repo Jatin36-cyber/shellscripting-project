@@ -1,0 +1,32 @@
+#!/bin/bash
+clear
+read -p "Enter Evaluation(space after every digit eg. a + b) = " A B C
+#read -p "Enter Evaluation = " B
+#read -p "Enter Evaluation = " C
+
+
+
+case $B in
+"+")
+
+d=$[$A + $C]
+echo " $A + $C = $d  "
+;;
+"-")
+d=$[$A - $C]
+echo " $A - $C = $d  "
+;;
+"*")
+d=$[$A * $C]
+echo " $A * $C = $d  "
+;;
+"/")
+d=$(echo "scale=2 ; $A / $C" | bc)
+echo " $A / $C = $d  "
+;;
+*)
+read -p "please check your options"
+;;
+esac
+echo -e "press ctrl+c to exit.........\n\n"
+echo `/root/script/task5.calculator`
