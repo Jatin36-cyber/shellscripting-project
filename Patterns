@@ -1,5 +1,8 @@
 #!/bin/bash
 clear
+
+##this script print different pattern
+
 echo -e "\ndiamond pattern\n"
 for (( a=1;$a<=5;a++ ))
 do

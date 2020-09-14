@@ -1,11 +1,10 @@
 #!/bin/bash
 clear
+
+##this is a basic calculator in which you can add,subtract,multiply or divide any two no. just run the script and enter your evaluation 
+
+
 read -p "Enter Evaluation(space after every digit eg. a + b) = " A B C
-#read -p "Enter Evaluation = " B
-#read -p "Enter Evaluation = " C
-
-
-
 case $B in
 "+")
 
@@ -29,4 +28,6 @@ read -p "please check your options"
 ;;
 esac
 echo -e "press ctrl+c to exit.........\n\n"
+
+##you need to give the path of your script in the last echo to run script after every evaluation in loop
 echo `/root/script/task5.calculator`
