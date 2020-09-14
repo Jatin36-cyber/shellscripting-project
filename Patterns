@@ -1,0 +1,126 @@
+#!/bin/bash
+clear
+echo -e "\ndiamond pattern\n"
+for (( a=1;$a<=5;a++ ))
+do
+	for (( b=1;$b<=$a;b++ ))
+	do
+		echo -n "*"
+	done
+echo " "
+done
+
+for (( a=1;$a<=5;a++ ))
+do
+	for (( b=$a;$b<=4;b++ ))
+	do
+		echo -n "*"
+	done
+echo " "
+done
+
+
+
+echo -e "\n\ncone pattern\n"
+for (( a=1;$a<=5;a++ ))
+do
+	for (( b=$a;$b<=5;b++ ))
+	do
+		echo -n " "
+	done
+	for (( b=1;$b<=$a;b++ ))
+	do
+		echo -n "*"
+	done
+	
+	for (( b=2;$b<=$a;b++ ))
+	do
+		echo -n "*"
+	done
+	
+	
+echo " "
+done
+
+echo -e "\n\nright slanting cube pattern\n"
+for (( a=1;$a<=5;a++ ))
+do
+	for (( b=$a;$b<=5;b++ ))
+	do
+		echo -n " "
+	done
+	for (( b=1;$b<=$a;b++ ))
+	do
+		echo -n "*"
+	done
+	
+	for (( b=$a;$b<=5;b++ ))
+	do
+		echo -n "*"
+	done
+	
+	
+echo " "
+done
+echo -e "\n\nspotlight pattern\n"
+for (( a=1;$a<=5;a++ ))
+do
+	for (( b=1;$b<=$a;b++ ))
+	do
+		echo -n " "
+	done
+	for (( b=1;$b<=$a;b++ ))
+	do
+		echo -n "*"
+	done
+	
+	for (( b=2;$b<=$a;b++ ))
+	do
+		echo -n "*"
+	done
+	
+	
+echo " "
+done
+
+echo -e "\n\nleft slanting cube pattern\n"
+for (( a=1;$a<=5;a++ ))
+do
+	for (( b=$a;$b<=5;b++ ))
+	do
+		echo -n " "
+	done
+	for (( b=1;$b<=$a;b++ ))
+	do
+		echo -n "*"
+	done
+	
+	for (( b=$a;$b<=5;b++ ))
+	do
+		echo -n "*"
+	done
+	
+	
+echo " "
+done
+
+echo -e "\n\nreverse cone pattern\n"
+for (( a=1;$a<=5;a++ ))
+do
+	for (( b=1;$b<=$a;b++ ))
+	do
+		echo -n " "
+	done
+	for (( b=$a;$b<=5;b++ ))
+	do
+		echo -n "*"
+	done
+	
+	for (( b=$a;$b<=4;b++ ))
+	do
+		echo -n "*"
+	done
+	
+	
+echo " "
+done
