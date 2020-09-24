@@ -4,6 +4,18 @@ clear
 ##this script print different pattern
 
 echo -e "\ndiamond pattern\n"
+
+#first pattern starts from here it print pattern like this:
+#*
+#**
+#***
+#****
+#*****
+#****
+#***
+#**
+#*
+
 for (( a=1;$a<=5;a++ ))
 do
 	for (( b=1;$b<=$a;b++ ))
@@ -22,9 +34,18 @@ do
 echo " "
 done
 
+#first pattern end here
 
 
-echo -e "\n\ncone pattern\n"
+echo -e "\n\npyramid pattern\n"
+
+#second pattern starts from here it print pattern like this:
+#    *
+#   ***
+#  *****
+# *******
+#*********
+
 for (( a=1;$a<=5;a++ ))
 do
 	for (( b=$a;$b<=5;b++ ))
@@ -44,8 +65,16 @@ do
 	
 echo " "
 done
+#second pattern end here
 
 echo -e "\n\nright slanting cube pattern\n"
+#third pattern starts from here it print pattern like this:
+#     ****** 
+#    ****** 
+#   ****** 
+#  ****** 
+# ****** 
+
 for (( a=1;$a<=5;a++ ))
 do
 	for (( b=$a;$b<=5;b++ ))
@@ -65,7 +94,17 @@ do
 	
 echo " "
 done
+#third pattern end here
+
 echo -e "\n\nspotlight pattern\n"
+#fourth pattern starts from here it print pattern like this:
+#  * 
+#   *** 
+#    ***** 
+#     ******* 
+#      ********* 
+
+
 for (( a=1;$a<=5;a++ ))
 do
 	for (( b=1;$b<=$a;b++ ))
@@ -85,8 +124,17 @@ do
 	
 echo " "
 done
+#fourth pattern end here
 
 echo -e "\n\nleft slanting cube pattern\n"
+#fourth pattern starts from here it print pattern like this:
+#     ****** 
+#    ****** 
+#   ****** 
+#  ****** 
+# ****** 
+
+
 for (( a=1;$a<=5;a++ ))
 do
 	for (( b=$a;$b<=5;b++ ))
@@ -106,8 +154,17 @@ do
 	
 echo " "
 done
+#fourth pattern end here
 
-echo -e "\n\nreverse cone pattern\n"
+
+
+echo -e "\n\nreverse  pattern\n"
+#fifth pattern starts from here it print pattern like this:
+# ********* 
+#  ******* 
+#   ***** 
+#    *** 
+#     * 
 for (( a=1;$a<=5;a++ ))
 do
 	for (( b=1;$b<=$a;b++ ))
@@ -127,3 +184,5 @@ do
 	
 echo " "
 done
+
+#fifth pattern end here

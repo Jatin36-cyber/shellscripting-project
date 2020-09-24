@@ -1,0 +1,30 @@
+#!/bin/bash
+clear
+#this script is to check the user database and can add new user in the datatbase and save user info in userdata file in #the format username : password and if userdata file not exist it create userdata first and then add user in userdata and #verify that you can't add more than 1 user of same name
+
+#if userdata exist then script do nothing
+if [ -f userdata ]
+then
+	pass
+#else create userdata file in current location
+else
+	echo "creating file ` touch userdata ` "
+	fi
+#prompt to type the name of the user you want to create and store it in variable A
+read -p "Enter new username : " A
+#grep check that username exist in userdata file or not and store the output in variable B
+B=` grep -wo ^$A userdata`
+#if A = B this means username exist in userdata file
+if [ "$A" = "$B" ]
+then
+echo "user already exist"
+else
+#else script ask to set user password and store it in C 
+read -p "set $A password : " C
+#storing the user in database in specified format
+echo "$A : $C " >> userdata
+echo "User added succesfully"
+fi
+
+
+#EOF

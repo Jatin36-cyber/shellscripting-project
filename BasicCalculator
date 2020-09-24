@@ -3,31 +3,33 @@ clear
 
 ##this is a basic calculator in which you can add,subtract,multiply or divide any two no. just run the script and enter your evaluation 
 
+while :
+do
 
-read -p "Enter Evaluation(space after every digit eg. a + b) = " A B C
-case $B in
-"+")
+	read -p "Enter Evaluation(space after every digit eg. a + b) = " A B C
+	case $B in
+	"+")
 
-d=$[$A + $C]
-echo " $A + $C = $d  "
-;;
-"-")
-d=$[$A - $C]
-echo " $A - $C = $d  "
-;;
-"*")
-d=$[$A * $C]
-echo " $A * $C = $d  "
-;;
-"/")
-d=$(echo "scale=2 ; $A / $C" | bc)
-echo " $A / $C = $d  "
-;;
-*)
-read -p "please check your options"
-;;
-esac
-echo -e "press ctrl+c to exit.........\n\n"
+	d=$[$A + $C]
+	echo " $A + $C = $d  "
+	;;
+	"-")
+	d=$[$A - $C]
+	echo " $A - $C = $d  "
+	;;
+	"*")
+	d=$[$A * $C]
+	echo " $A * $C = $d  "
+	;;
+	"/")
+	d=$(echo "scale=2 ; $A / $C" | bc)
+	echo " $A / $C = $d  "
+	;;
+	*)
+	read -p "please check your options"
+	;;
+	esac
+	echo -e "press ctrl+c to exit.........\n\n"
 
-##you need to give the path of your script in the last echo to run script after every evaluation in loop
-echo `/root/script/task5.calculator`
+done
+

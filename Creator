@@ -1,0 +1,39 @@
+#!/bin/bash
+clear
+#this script will take input from user and question them what the want to do as create file or directory
+read -p "press D or F for directory or file =  " A
+#if user want to create directory they press D and value store automatically in A variable
+if [ $A == "D" ]
+then
+#then he need to write the name of directory they want to create
+read -p "enter directory name = " B
+#and check whether the file or directory exist in specified location or not 
+	if [ -d $B ]
+#if exist then give error
+	then
+	echo "error:directory is already present"
+	else
+#else create direcory in specified location
+	echo "creating directory ` mkdir $B `"
+	fi
+#if user want to create file they press F and value store automatically in A variable
+elif [ $A == "F"  ]
+then
+#then he need to write the name of the file they want to create
+read -p "enter file name = " C
+#and check whether the file or directory exist in specified location or not 
+	if [ -f $C ]
+	then
+#if exist then give error
+	echo "error:file is already present"
+	else
+#else create file in specified location
+	echo "creating file ` touch $C ` "
+	fi
+else
+#if user enter input other than D or F they get an error
+echo "error:wrong input, choose only D or F "
+fi
+
+
+#EOF

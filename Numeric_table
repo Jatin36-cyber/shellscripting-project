@@ -1,0 +1,17 @@
+#!/bin/bash
+clear
+#while loop for continuation of program
+while :
+do
+	#this script print different tables just enter the table no. and the no. for which you want your table
+	read -p "Enter the no. for table : " A
+	read -p "create table upto : " B
+	#when you enter you table no. it stores in variable A and upto no. stores in variable B
+	for (( e=1;$e<=$B;e++ ))
+	do
+		C=$[$A * $e]
+		echo -e " $A * $e = $C\n "
+	done
+	#press ctrl+c anytime to exit from script
+	echo -e "press ctrl+c to exit\n"
+done
